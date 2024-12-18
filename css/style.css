@@ -1,18 +1,31 @@
+:root {
+    --color-principal: #ec3251;
+    --color-secundario: #0d78be;
+    --color-texto-titulos: #0d78be;
+}
+
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: "Poppins", serif;
 }
 main{
     flex-grow: 1;
 }
 
 h3{
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 p{
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.description-service-wrapper{
+    margin: 2% 10%;
+    text-align: center;
 }
 
 .cards-container{
@@ -54,7 +67,7 @@ p{
 
 .card{
     width: 90%;
-    height: 410px;
+    height: 380px;
     max-width: 300px;
     min-width: 300px;
     margin: 10px auto;
@@ -70,6 +83,14 @@ p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     color: white;
+
+    /*Para animacion pequeña*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card::before{
@@ -102,6 +123,12 @@ p{
 
 #card-3{
     background-image: url('../assets/business-data-info.jpg');
+}
+
+#services-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-texto-titulos);
 }
 
 @media (min-width: 768px){
