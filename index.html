@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesinco</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="./assets/logo-fondo-rojo.jpg"
+                alt="logo de la panaderia"
+                width="150px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/sobreNosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/contacto.html">Contactos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+     
+      <main>
+        <h1>Gesinco</h1>
+        <section
+        id="carouselProductos"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselFotos"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselFotos"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselFotos"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src=""
+              class="d-block w-100 banner-responsive"
+              alt=""
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src=""
+              class="d-block w-100 banner-responsive"
+              alt=""
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src=""
+              class="d-block w-100 banner-responsive"
+              alt=""
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselProductos"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselProductos"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+
+      <!--Cards de servicios-->
+      <section class="cards-container" aria-labelledby="services-title">
+        <div class="description-service-wrapper">
+        <h2 id="services-title">Nuestros Servicios</h2>
+        <p> En GESINCO, nos especializamos en optimizar y agilizar el proceso de recuperacion
+          de créditos y deudas para empresas de todo tipo.
+        </p>
+        <p>Brindamos soluciones personalizadas que permiten a nuestros clientes mejorar su liquidez y mantener relaciones
+          comerciales saludables.
+        </p>
+      </div>
+        <div class="cards-wrapper">
+          
+          <article id="card-1" class="card" aria-labelledby="cobranza-extrajudicial">
+            <h3 id="cobranza-extrajuddicial">Cobranza extrajudicial</h3>
+            <p>Nos encargamos de gestionar deudas vencidas en sus primeras etapas.
+              Realizamos seguimientos constantes mediante llamadas telefónicas, correos electrónicos
+              y mensajes automáticos, manteniendo siempre un trato respetuoso y profesional con sus clientes.
+            </p>
+          </article>
+
+          <article id="card-2" class="card" aria-labelledby="recuperacion-de-cartera-morosa">
+            <h3 id="recuperacion-de-cartera-morosa">Recuperador de cartera morosa</h3>
+            <p>Realizamos análisis detallados de su cartera de clientes para implementar estrategias que
+              maximicen la tasa de recuperacion. Utilizamos tecnología avanzada para segmentar y priorizar deudores, garantizando
+              una gestion eficiente.
+            </p>
+          </article>
+
+          <article id="card-3" class="card" aria-labelledby="informes-de-gestion-y-analisis">
+            <h3 id="informes-de-gestion-y-analisis">Informes de gestión y análisis</h3>
+            <p>Brindamos informes detallados y análisis personalizados para que su empresa pueda tomar decisiones
+              informadas y optimizar el proceso de cobranzas.
+            </p>
+          </article>
+
+        </div>
+      </section>
+      </main>
+
+      <footer class="bg-danger text-light py-3">
+        <section class="container">
+          <article class="row">
+            <aside class="col-12 col-md-4 text-center">
+              <img
+                src="./assets/logo-fondo-rojo.jpg"
+                width="250px"
+                alt="Logo Gesinco"
+              />
+            </aside>
+            <aside class="col-12 col-md-4">
+              <h5>Horarios de atención</h5>
+              <ul>
+                <li>Lunes a viernes de 09 a 19hs</li>
+                <li>Sabados de 09 a 12hs</li>
+              </ul>
+            </aside>
+            <aside class="col-12 col-md-4">
+              <h5>Seguinos en nuestras redes</h5>
+              <div class="text-center text-md-start">
+                <a href="./pages/error404.html" class="text-light"
+                  ><i class="bi bi-facebook fs-5"></i
+                ></a>
+                <a href="./pages/error404.html" class="text-light mx-2"
+                  ><i class="bi bi-instagram fs-5"></i
+                ></a>
+                <a href="./pages/error404.html" class="text-light"
+                  ><i class="bi bi-whatsapp fs-5"></i
+                ></a>
+              </div>
+            </aside>
+          </article>
+        </section>
+      </footer>
+
+      <div id="modalBtn">
+        <button id="openModalBtn">Quiero llegar a un acuerdo</button>
+      </div>
+
+      <div id="actionModal" style="display: none;">
+        <div class="modalContent">
+          <button id="closeModalBtn">X</button>
+          <ul>
+            <li><a href="http://" target="_blank">WhatsApp</a></li>
+            <li><a href="tel:+">Llamada</a></li>
+            <li><a href="http://">Ir a Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
+      <script src="/app.js"></script>
+</body>
+</html>
