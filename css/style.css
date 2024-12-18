@@ -6,3 +6,69 @@ body{
 main{
     flex-grow: 1;
 }
+
+/*SOBRE NOSOTROS*/
+
+/* Imagen grande de fondo con sombra oscura */
+.background-img {
+    height: 10vh; /* Altura de la mitad de la pantalla */
+    object-fit: cover; /* Ajusta la imagen para que cubra el espacio */
+    position: relative;
+  }
+  
+  /* Capa oscura sobre la imagen grande */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra oscura */
+  }
+  
+  /* Contenido central (imagen y texto) */
+  .position-absolute {
+    position: absolute;
+    z-index: 2; /* Para asegurar que el contenido esté sobre la capa oscura */
+  }
+  
+  /* Título de la sección */
+  .section-title {
+    font-size: 3rem;
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-bottom: 0;
+
+  }
+
+  #descripcion {
+   position: relative;
+   margin-bottom: 200px;
+  }
+  
+  /* Estilo de la imagen pequeña */
+  #quienes-somos img {
+    width: 200px; /* Tamaño reducido de la imagen */
+    height: auto; /* Mantener la proporción */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  }
+  
+  /* Tipografía y texto */
+  .open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+    .open-sans {
+      font-size: 1rem;
+    }
+  }
+  
