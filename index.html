@@ -23,13 +23,13 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+        <nav class="navbar navbar-expand-lg  navbar-dark menu">
           <div class="container">
             <a class="navbar-brand" href="index.html">
               <img
-                src="./assets/logo-fondo-rojo.jpg"
+                src="./assets/1000235602.png"
                 alt="logo de la panaderia"
-                width="150px"
+                width="200px"
               />
             </a>
             <button
@@ -66,76 +66,30 @@
       </header>
      
       <main>
-        <h1>Gesinco</h1>
-        <section
-        id="carouselProductos"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselFotos"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselFotos"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselFotos"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src=""
-              class="d-block w-100 banner-responsive"
-              alt=""
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src=""
-              class="d-block w-100 banner-responsive"
-              alt=""
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src=""
-              class="d-block w-100 banner-responsive"
-              alt=""
-            />
+       <div class="container-slider">
+        <div class="wrapper-slider">
+          <div class="wrapper-slider-holder">
+            <div id="slider-img-1">
+              <div id="slider-info"><p class="p-1 fw-semibold fs-5">Estrategias inteligentes, tecnología avanzada y experiencia comprobada.</p> </div>
+            </div>
+            <div id="slider-img-2">
+              <div id="slider-info"><p class=" fw-semibold fs-5">Confianza construida en cada gestión.</p> </div>
+            </div>
+            <div id="slider-img-3">
+              <div id="slider-info"> <p class=" fw-semibold fs-5">Eficiencia garantizada en cada paso.</p></div>
+            </div>
+            <div id="slider-img-4">
+              <div id="slider-info"><p class=" fw-semibold fs-5">Innovación tecnológica al servicio de nuestros clientes.</p> </div>
+            </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselProductos"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselProductos"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </section>
+        <div class="button-slider-holder">
+          <a href="#slider-img-1" class="button-slider"></a>
+          <a href="#slider-img-2" class="button-slider"></a>
+          <a href="#slider-img-3" class="button-slider"></a>
+          <a href="#slider-img-4" class="button-slider"></a>
+        </div>
+       </div>
 
       <!--Cards de servicios-->
       <section class="cards-container" aria-labelledby="services-title">
@@ -179,22 +133,24 @@
       </section>
       </main>
 
-      <footer class="bg-danger text-light py-3">
+      <footer class="text-light py-3">
         <section class="container">
           <article class="row">
             <aside class="col-12 col-md-4 text-center">
-              <img
-                src="./assets/logo-fondo-rojo.jpg"
-                width="250px"
-                alt="Logo Gesinco"
-              />
-            </aside>
-            <aside class="col-12 col-md-4">
-              <h5>Horarios de atención</h5>
-              <ul>
-                <li>Lunes a viernes de 09 a 19hs</li>
-                <li>Sabados de 09 a 12hs</li>
+              
+              <ul class="text-start ps-0">
+                <ol class="ps-0">Sarmiento 432 - Rosario - Santa Fé - Argentina</ol>
+                <ol class="ps-0">Email:</ol>
+                <ol class="ps-0">info@gesinco.com.ar</ol>
               </ul>
+              
+            </aside>
+            <aside class="col-12 col-md-4 text-center">
+              <img
+              src="./assets/1000235602.png"
+              width="300px"
+              alt="Logo Gesinco"
+            />
             </aside>
             <aside class="col-12 col-md-4">
               <h5>Seguinos en nuestras redes</h5>
