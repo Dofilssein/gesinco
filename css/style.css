@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 :root {
     --color-principal: #ec3251;
     --color-secundario: #0d78be;
@@ -8,8 +11,13 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: "Poppins", serif;
+    background-image: url('../assets/fondo2.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    font-family: 'Open Sans', sans-serif;
 }
+
 main{
     flex-grow: 1;
 }
@@ -83,8 +91,6 @@ p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     color: white;
-
-    /*Para animacion pequeña*/
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -240,5 +246,4 @@ p{
     }
 
 }
-
 
