@@ -18,7 +18,7 @@ main{
 /*SOBRE NOSOTROS*/
 .parallax {
   background-image: url(../assets/build-bussiness.jpg);
-  min-height: 450px;
+  min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,6 +66,37 @@ main{
   z-index: 2;
 }
 
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .imagen {
+    display: none; 
+  }
+  .text-end-custom, 
+  .card-text {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+  .parallax {
+    min-height: 300px
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes adicionales para móviles */
+  .text-end-custom {
+    font-size: 1.3rem; 
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 15px;
+    position: relative;
+  }
+  .parallax {
+    min-height: 950px;
+}
+}
 /*¿QUÉ NOS DIFERENCIA?*/
 .title{
   color: #0d78b0;
