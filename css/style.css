@@ -41,7 +41,6 @@ footer{
     position: relative;
 }
 .container-slider .wrapper-slider{
-    width: 100vw;
     height: 65vh;
     overflow: hidden;
 }
@@ -226,6 +225,23 @@ p{
     background-color: rgba(8, 67, 177, 0.5);
     z-index: 1;
 }
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 0;
+    height: 2px;
+    background: white; 
+    transition: width 0.5s ease;
+    font-weight: bold;
+  }
+  
+  .card-title:hover::after {
+    width: 100%; 
+  }
+  
 
 .card h3,
 .card p{
