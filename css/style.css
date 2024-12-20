@@ -461,3 +461,92 @@ p{
 
 }
 
+/*CONTACTO*/
+
+#title {
+    color: #0d78be;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0d78b0; 
+    transition: width 0.3s ease;
+}
+
+#title:hover {
+    color: #0d78b0;
+    transform: translateY(-5px);
+}
+
+#title:hover::after {
+    width: 100%;
+}
+
+#boton-contacto {
+    background-color: #ec3251; 
+    color: white; 
+    border: 2px solid #ec3251; 
+    transition: all 0.3s ease; 
+}
+
+#boton-contacto:hover {
+    background-color: white; 
+    color: #0d78be; 
+    border-color: #0d78be;
+    transform: scale(1.05); 
+}
+
+#horarios{
+    color: #0d78b0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#horarios::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0d78b0; 
+    transition: width 0.3s ease;
+}
+
+#horarios:hover {
+    color: #0d78b0;
+    transform: translateY(-5px);
+}
+
+#horarios:hover::after {
+    width: 100%;
+}
+
+#lista, #direccion, #email, #telefono, #whatsapp {
+    color: #0d78b0;
+    transition: transform 0.3s ease;
+}
+
+#lista:hover, #direccion:hover, #email:hover, #telefono:hover, #whatsapp:hover {
+    transform: translateY(-5px);
+  
+}
+
+#mapa {
+    margin-top: 0; 
+    transition: margin-top 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    #mapa {
+        margin-top: 20px;
+    }
+}
