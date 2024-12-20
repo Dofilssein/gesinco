@@ -1,3 +1,6 @@
+let phoneNumber = '';
+let whatsappNumber = '';
+
 // Abrir el modal
 document.getElementById('openModalBtn').addEventListener('click', () => {
     document.getElementById('modal-fondo').style.display = 'block';  // Mostrar el fondo
@@ -35,28 +38,37 @@ document.getElementById('openModalBtn').addEventListener('click', () => {
         }
   
         // Función para validar los números de teléfono
-        function isValidPhoneNumber(number) {
-          const phoneRegex = /^[0-9]{11}$/;
-          return phoneRegex.test(number);
+        function isValidPhoneNumber(number, type) {
+          const phoneRegex = /^[0-9]{11}$/;  // Validación para teléfono (11 dígitos)
+          const whatsappRegex = /^[0-9]{13}$/;  // Validación para WhatsApp (13 dígitos)
+  
+          if (type === 'phone') {
+            return phoneRegex.test(number);
+          } else if (type === 'whatsapp') {
+            return whatsappRegex.test(number);
+          }
+          return false;
         }
   
-        // Función para redirigir al usuario
+        // Función para redirigir al usuario a WhatsApp
         function redirigirWhatsapp() {
-          if (isValidPhoneNumber(whatsappNumber)) {
+          if (isValidPhoneNumber(whatsappNumber, 'whatsapp')) {
             window.open(`https://wa.me/${whatsappNumber}`, '_blank');
           } else {
             console.error('Número de WhatsApp no válido');
           }
         }
   
+        // Función para redirigir al usuario a realizar una llamada
         function redirigirLlamada() {
-          if (isValidPhoneNumber(phoneNumber)) {
+          if (isValidPhoneNumber(phoneNumber, 'phone')) {
             window.location.href = `tel:${phoneNumber}`;
           } else {
             console.error('Número de teléfono no válido');
           }
         }
   
+        // Función para redirigir al usuario a la sección de contacto
         function redirigirContacto() {
           if (isValidURL(contactSection)) {
             window.location.href = contactSection;  // Redirigir a la sección de contacto
