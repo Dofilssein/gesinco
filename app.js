@@ -96,3 +96,8 @@ document.getElementById('openModalBtn').addEventListener('click', () => {
       .catch(error => console.error('Error al cargar el archivo JSON:', error));
   });
   
+window.addEventListener("scroll",function(){
+  let header = document.querySelector("header");
+  header.classList.toggle("abajo",window.scrollY>0)
+
+})

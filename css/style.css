@@ -28,13 +28,31 @@ body{
 
 main{
     flex-grow: 1;
+    margin-top: 82px;
 }
 
-.menu{
-    background-color: var(--color-principal);
-}
+
 footer{
     background-color: var(--color-principal);
+}
+header{
+    background-color: var(--color-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.7s, box-shadow 0.7s;
+}
+header.abajo {
+    background-color: rgba(255, 0, 0, 0); /* Transparente */
+    box-shadow: none; /* Sin sombra */
+}
+header.abajo ul li a{
+    color: var(--color-secundario);
+}
+header.abajo #logo {
+    content: url("../assets/1000237217.png"); /* Cambia al logo negro */
 }
 
 .container-slider{
