@@ -57,6 +57,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider #slider-img-2{
     background-image:url('../assets/call-center.jpg') ;
@@ -64,6 +65,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider #slider-img-3{
     background-image:url('../assets/team-working-2.jpg') ;
@@ -71,6 +73,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider #slider-img-4{
     background-image:url('../assets/business-data-info.jpg') ;
@@ -78,6 +81,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider .button-slider-holder .button-slider{
     background-color: white;
