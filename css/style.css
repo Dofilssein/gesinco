@@ -156,6 +156,16 @@ header.abajo #logo {
     justify-content: center;
     align-items: center;
 }
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .container-slider #slider-info {
+        width: 300px; /* Reducir el tamaño */
+        height: 150px; /* Reducir el tamaño */
+    }
+    #slider-info p{
+       padding: 1rem;
+    }
+}
 
 #slider-info p{
     margin: 0px;
