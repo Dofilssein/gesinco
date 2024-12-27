@@ -14,6 +14,10 @@
     --font-size-h3: 1.3125rem
 
 }
+ 
+*{
+    box-sizing: border-box;
+}
 
 body{
     display: flex;
@@ -24,6 +28,12 @@ body{
     background-repeat: no-repeat; 
     background-position: center; 
     font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 main{
@@ -57,9 +67,10 @@ header.abajo #logo {
 
 .container-slider{
     position: relative;
+    overflow: hidden; /*Correccion 1*/
 }
 .container-slider .wrapper-slider{
-    height: 65vh;
+    height: 90vh;
     overflow: hidden;
 }
 .container-slider .wrapper-slider-holder{
@@ -73,7 +84,7 @@ header.abajo #logo {
     background-image:url('../assets/bussines-group-people.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     filter: brightness(0.8);
 }
@@ -81,7 +92,7 @@ header.abajo #logo {
     background-image:url('../assets/call-center.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     filter: brightness(0.8);
 }
@@ -89,7 +100,7 @@ header.abajo #logo {
     background-image:url('../assets/team-working-2.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     filter: brightness(0.8);
 }
@@ -97,7 +108,7 @@ header.abajo #logo {
     background-image:url('../assets/business-data-info.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     filter: brightness(0.8);
 }
@@ -131,28 +142,21 @@ header.abajo #logo {
     width: 400px;
     height: 200px;
     background-color: rgba(0, 0, 0, 0.6);
-    overflow: hidden;
+   /* overflow: hidden;
     margin: 30vw auto;
+    */
+
+    /*Para centrar el slider-info sin media*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+}
 
-}
-@media (min-width:1024px){
-    .container-slider #slider-info{
-        margin: 7vw auto;
-    }
-}
-@media (min-width:390px) and (max-width:414px){
-    .container-slider #slider-info{
-        width: 300px;
-        height: 150px;
-    }
-    .container-slider .button-slider-holder{
-        left: 40%;
-    }
-}
 #slider-info p{
     margin: 0px;
     text-align: center;
@@ -446,6 +450,10 @@ p{
 
 @media (min-width: 768px){
 
+    .container-slider .wrapper-slider{
+        height: 65vh;
+    }
+
     .cards-wrapper{
         flex-direction: row;
         justify-content: center;
@@ -465,6 +473,10 @@ p{
 }
 
 @media (min-width: 1024px){
+
+    .container-slider .wrapper-slider{
+        height: 65vh;
+    }
 
     .cards-wrapper{
         flex-direction: row;
