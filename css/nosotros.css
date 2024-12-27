@@ -3,7 +3,7 @@
   position: relative;
   background-image: url(../assets/build-bussiness.jpg);
   min-height: 500px;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,7 +85,7 @@
     position: relative;
   }
   .parallax {
-    min-height: 950px;
+    min-height: 1050px;
 }
 }
 /*¿QUÉ NOS DIFERENCIA?*/
