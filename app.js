@@ -121,3 +121,22 @@ sliderTrack.style.width = `${totalSlides * slideWidth}px`;
 // Ajustar la duración de la animación basada en el número de imágenes
 const animationDuration = totalSlides * 5; // Modifica 5 para ajustar la velocidad
 sliderTrack.style.animationDuration = `${animationDuration}s`;
+
+//navbar
+ // Obtener todos los enlaces de navegación
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+// Obtener el elemento del colapso (el menú desplegable)
+const navbarCollapse = document.getElementById('navbarSupportedContent');
+
+// Agregar un evento de clic a cada enlace
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Cerrar el menú
+        const collapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false // No vuelve a abrir el menú
+        });
+        collapse.hide(); // Cierra el menú
+    });
+});
+
