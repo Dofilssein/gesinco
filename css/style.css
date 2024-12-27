@@ -28,13 +28,31 @@ body{
 
 main{
     flex-grow: 1;
+    margin-top: 82px;
 }
 
-.menu{
-    background-color: var(--color-principal);
-}
+
 footer{
     background-color: var(--color-principal);
+}
+header{
+    background-color: var(--color-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.7s, box-shadow 0.7s;
+}
+header.abajo {
+    background-color: rgba(255, 0, 0, 0); /* Transparente */
+    box-shadow: none; /* Sin sombra */
+}
+header.abajo ul li a{
+    color: var(--color-secundario);
+}
+header.abajo #logo {
+    content: url("../assets/1000237217.png"); /* Cambia al logo negro */
 }
 
 .container-slider{
@@ -57,6 +75,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider #slider-img-2{
     background-image:url('../assets/call-center.jpg') ;
@@ -64,6 +83,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider #slider-img-3{
     background-image:url('../assets/team-working-2.jpg') ;
@@ -71,6 +91,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider #slider-img-4{
     background-image:url('../assets/business-data-info.jpg') ;
@@ -78,6 +99,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: brightness(0.8);
 }
 .container-slider .button-slider-holder .button-slider{
     background-color: white;
@@ -129,6 +151,9 @@ footer{
     .container-slider #slider-info{
         width: 300px;
         height: 150px;
+    }
+    .container-slider .button-slider-holder{
+        left: 40%;
     }
 }
 #slider-info p{
@@ -549,4 +574,54 @@ p{
     #mapa {
         margin-top: 20px;
     }
+}
+
+/*SLIDER CLIENTES*/
+
+.slider-clientes {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-clientes .slider-clientes-track {
+    display: flex;
+    animation: scroll linear infinite;
+    will-change: transform;
+    background-color: #fff;
+}
+
+.slider-clientes .slide-cliente {
+    min-width: 150px; /* Ajusta según el tamaño deseado */
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-clientes .slide-cliente img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.h1-cliente {
+    text-align: center;
+    color: var(--color-texto-titulos);
+}
+
+.formulario-contacto{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 2%;
+    color: #fff;
 }

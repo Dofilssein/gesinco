@@ -1,22 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('../assets/fondo2.png'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    font-family: 'Open Sans', sans-serif;
-}
-
-main{
-    flex-grow: 1;
-}
-
 /*SOBRE NOSOTROS*/
 .parallax {
+  position: relative;
   background-image: url(../assets/build-bussiness.jpg);
   min-height: 500px;
   background-attachment: fixed;
@@ -25,6 +9,7 @@ main{
   background-size: cover;
   object-fit: cover;
 }
+
 
 .parallax::before {
   content: "";
@@ -36,6 +21,12 @@ main{
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1; 
 }
+.overlay-nosotros {
+  position: relative;
+  z-index: 2; /* Esto asegura que el contenido esté encima del parallax */
+  color: white; /* Para que el texto sea visible sobre el fondo oscuro */
+}
+
 
 /*Titulo*/
 .text-end-custom{
@@ -48,14 +39,14 @@ main{
 }
 
 /*Parrafo*/
-.card-text{
+.card-text-nosotros{
   position: relative;
   z-index: 2;
   margin-bottom: 5px;
 }
 
 /*IMAGEN SOBRE NOSOTROS*/
-.imagen {
+.imagen-nosotros {
   display: block; 
   max-width: 230px;
   height: auto; 
@@ -68,11 +59,11 @@ main{
 
 /* Responsive ajustes */
 @media (max-width: 768px) {
-  .imagen {
+  .imagen-nosotros {
     display: none; 
   }
   .text-end-custom, 
-  .card-text {
+  .card-text-nosotros {
     text-align: center;
     margin: 0 auto;
     font-size: 1.2rem;
@@ -89,7 +80,7 @@ main{
     margin-bottom: 10px;
   }
 
-  .card-text {
+  .card-text-nosotros {
     font-size: 15px;
     position: relative;
   }
@@ -98,7 +89,7 @@ main{
 }
 }
 /*¿QUÉ NOS DIFERENCIA?*/
-.title{
+.title-nosotros{
   color: #0d78b0;
   font-weight: bold;
   position: relative;
