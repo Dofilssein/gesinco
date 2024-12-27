@@ -23,10 +23,6 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../assets/fondo2.png'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -55,8 +51,10 @@ header{
     transition: background-color 0.7s, box-shadow 0.7s;
 }
 header.abajo {
-    background-color: rgba(255, 0, 0, 0); /* Transparente */
+    background-color: rgba(255, 0, 0, 0); /* Transparente */ 
     box-shadow: none; /* Sin sombra */
+
+    
 }
 header.abajo ul li a{
     color: var(--color-secundario);
@@ -453,9 +451,6 @@ p{
 
 @media (min-width: 768px){
 
-    .container-slider .wrapper-slider{
-        height: 65vh;
-    }
 
     .cards-wrapper{
         flex-direction: row;
@@ -477,9 +472,6 @@ p{
 
 @media (min-width: 1024px){
 
-    .container-slider .wrapper-slider{
-        height: 65vh;
-    }
 
     .cards-wrapper{
         flex-direction: row;
@@ -599,6 +591,7 @@ p{
 .slider-clientes .slider-clientes-track {
     display: flex;
     animation: scroll linear infinite;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     will-change: transform;
     background-color: #fff;
 }
