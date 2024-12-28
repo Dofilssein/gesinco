@@ -1,3 +1,18 @@
+:root {
+  --color-principal: #ec3251;
+  --color-secundario: #0d78be;
+  --color-texto-titulos: #000000;
+  --color-subrayado: #EE4461;
+
+  --font-size-base: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-large: 1.25rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 1.625rem;
+  --font-size-h3: 1.3125rem
+
+}
+
 /*SOBRE NOSOTROS*/
 .parallax {
   position: relative;
@@ -90,11 +105,12 @@
 }
 /*¿QUÉ NOS DIFERENCIA?*/
 .title-nosotros{
-  color: #0d78b0;
-  font-weight: bold;
+  color: var(--color-texto-titulos);
+  font-weight: 600;
   position: relative;
   margin-top: 50px;
   margin-bottom: 30px;
+  font-size: var(--font-size-h1);
 }
 
 .herramienta {

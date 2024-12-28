@@ -29,7 +29,6 @@ document.getElementById('openModalBtn').addEventListener('click', () => {
         // Obtener los datos de los números y la sección de contacto
         const whatsappNumber = data.whatsappNumber;
         const phoneNumber = data.phoneNumber;
-        const contactSection = data.contactSection;
   
         // Función para validar las URL
         function isValidURL(url) {
@@ -68,15 +67,6 @@ document.getElementById('openModalBtn').addEventListener('click', () => {
           }
         }
   
-        // Función para redirigir al usuario a la sección de contacto
-        function redirigirContacto() {
-          if (isValidURL(contactSection)) {
-            window.location.href = contactSection;  // Redirigir a la sección de contacto
-          } else {
-            console.error('URL de contacto no válida');
-          }
-        }
-  
         // Agregar los eventos de los enlaces
         document.getElementById('whatsappLink').addEventListener('click', (event) => {
           event.preventDefault();
@@ -88,10 +78,6 @@ document.getElementById('openModalBtn').addEventListener('click', () => {
           redirigirLlamada();
         });
   
-        document.getElementById('contactLink').addEventListener('click', (event) => {
-          event.preventDefault();
-          redirigirContacto();
-        });
       })
       .catch(error => console.error('Error al cargar el archivo JSON:', error));
   });

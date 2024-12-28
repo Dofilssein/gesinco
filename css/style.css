@@ -4,16 +4,35 @@
 :root {
     --color-principal: #ec3251;
     --color-secundario: #0d78be;
-    --color-texto-titulos: #0d78be;
+    --color-texto-titulos: #000000;
+    --color-subrayado: #EE4461;
 
     --font-size-base: 1rem;
     --font-size-small: 0.875rem;
     --font-size-large: 1.25rem;
-    --font-size-h1: 2rem;
+    --font-size-h1: 3rem;
     --font-size-h2: 1.625rem;
     --font-size-h3: 1.3125rem
 
 }
+
+.subrayado{
+    position: relative;
+    font-weight: bold;
+    display: inline-block;   
+  }
+  
+  .subrayado::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: var(--color-subrayado);
+      z-index: -1;
+  }
+
  
 *{
     box-sizing: border-box;
@@ -182,7 +201,7 @@ p{
     width: 100%;
 
     position: relative;
-    background-image: url('../assets/fondo2.png');
+    /*background-image: url('../assets/fondo2.png');*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -587,14 +606,13 @@ p{
 
 .slider-clientes .slider-clientes-track {
     display: flex;
-    animation: scroll linear infinite;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: scroll infinite;
     will-change: transform;
     background-color: #fff;
 }
 
 .slider-clientes .slide-cliente {
-    min-width: 150px; /* Ajusta según el tamaño deseado */
+    min-width: 200px; /* Ajusta según el tamaño deseado */
     margin: 0 10px;
     display: flex;
     align-items: center;
@@ -612,13 +630,35 @@ p{
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
 .h1-cliente {
     text-align: center;
     color: var(--color-texto-titulos);
+    font-weight: 600;
+    font-size: var(--font-size-h1);
+    
+}
+
+.desc-empresas, 
+.info-empresas{
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: var(--font-size-base);
+}
+
+.info-empresas{
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 10px 3rem;
+    line-height: 1.8;
+}
+
+.desc-empresas{
+    font-weight: 600;
 }
 
 .formulario-contacto{
@@ -626,4 +666,12 @@ p{
     padding: 10px;
     border-radius: 2%;
     color: #fff;
+}
+
+.animate__animated {
+    visibility: hidden;
+}
+
+.animate__animated.animate__fadeInUp{
+    visibility: visible;
 }
