@@ -1,0 +1,96 @@
+.container-slider{
+    position: relative;
+    overflow: hidden; /*Correccion 1*/
+}
+.container-slider .wrapper-slider{
+    height: 90vh;
+    overflow: hidden;
+}
+.container-slider .wrapper-slider-holder{
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 35s ease-in-out infinite alternate;
+}
+.container-slider #slider-img-1{
+    background-image:url('../assets/bussines-group-people.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+.container-slider #slider-img-2{
+    background-image:url('../assets/call-center.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+.container-slider #slider-img-3{
+    background-image:url('../assets/team-working-2.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+.container-slider #slider-img-4{
+    background-image:url('../assets/business-data-info.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+.container-slider .button-slider-holder .button-slider{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container-slider .button-slider-holder{
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+}
+.container-slider #slider-info{
+    width: 400px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.6);
+   /* overflow: hidden;
+    margin: 30vw auto;
+    */
+
+    /*Para centrar el slider-info sin media*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider-info p{
+    margin: 0px;
+    text-align: center;
+}

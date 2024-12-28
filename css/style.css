@@ -20,9 +20,9 @@
     position: relative;
     font-weight: bold;
     display: inline-block;   
-  }
+}
   
-  .subrayado::after {
+.subrayado::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -31,7 +31,7 @@
       height: 40%;
       background-color: var(--color-subrayado);
       z-index: -1;
-  }
+}
 
  
 *{
@@ -69,115 +69,157 @@ header{
     z-index: 10;
     transition: background-color 0.7s, box-shadow 0.7s;
 }
+
 header.abajo {
     background-color: rgba(255, 0, 0, 0); /* Transparente */ 
     box-shadow: none; /* Sin sombra */
 
-    
+    .navbar-collapse{
+        background-color: #0d78b0;
+        border-radius: 15px;
+        color: #fff;
+        padding: 5px;
+        flex-grow: 0;
+    }
+
 }
 header.abajo ul li a{
-    color: var(--color-secundario);
+    color: #fff;
 }
+
+
 header.abajo #logo {
     content: url("../assets/1000237217.png"); /* Cambia al logo negro */
 }
 
+/* SLIDER */
+
 .container-slider{
-    position: relative;
-    overflow: hidden; /*Correccion 1*/
-}
-.container-slider .wrapper-slider{
+    width: 100%;
     height: 90vh;
+    margin: auto;
+    position: relative;
     overflow: hidden;
 }
-.container-slider .wrapper-slider-holder{
-    display: grid;
-    grid-template-columns: repeat(4, 100%);
-    height: 100%;
-    width: 100%;
-    animation: slider 35s ease-in-out infinite alternate;
-}
-.container-slider #slider-img-1{
-    background-image:url('../assets/bussines-group-people.jpg') ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    filter: brightness(0.8);
-}
-.container-slider #slider-img-2{
-    background-image:url('../assets/call-center.jpg') ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    filter: brightness(0.8);
-}
-.container-slider #slider-img-3{
-    background-image:url('../assets/team-working-2.jpg') ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    filter: brightness(0.8);
-}
-.container-slider #slider-img-4{
-    background-image:url('../assets/business-data-info.jpg') ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    filter: brightness(0.8);
-}
-.container-slider .button-slider-holder .button-slider{
-    background-color: white;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container-slider .button-slider-holder{
-    position: absolute;
-    left: 45%;
-    bottom: 0%;
-}
-@keyframes slider{
-    0%{transform: translateX(0%);}
-    10%{transform: translateX(-100%);}
-    20%{transform: translateX(-100%);}
-    30%{transform: translateX(-200%);}
-    40%{transform: translateX(-200%);}
-    50%{transform: translateX(-200%);}
-    60%{transform: translateX(-300%);}
-    70%{transform: translateX(-300%);}
-    80%{transform: translateX(-300%);}
-    90%{transform: translateX(0%);}
-    100%{transform: translateX(0%);}
-}
-.container-slider #slider-info{
-    width: 400px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.6);
-   /* overflow: hidden;
-    margin: 30vw auto;
-    */
 
-    /*Para centrar el slider-info sin media*/
+.wrapper-slider{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+
+    transition: all 2s ease-in-out;
+}
+
+.wrapper-slider-item {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-#slider-info p{
-    margin: 0px;
-    text-align: center;
+.wrapper-slider-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
+
+.wrapper-slider-item h2 {
+    position: absolute;
+    font-size: 3.75rem;
+    font-weight: 600;
+    z-index: 1;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+
+    bottom: 40%;
+    left: 20%;
+    right: 20%;
+}
+.wrapper-slider-item.position-1 h2{
+    left: 10%;
+    right: 10%;
+}
+
+.wrapper-slider-item img{
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+.buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+
+}
+
+.buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(236, 50, 81, 0.5);
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.dots li.active{
+    width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-slider{
+        height: 90vh;
+    }
+
+    .wrapper-slider-item h2 {
+        font-size: 2.5rem;
+        padding: 8px 16px;
+    }
+}
+
+/* TARJETAS SERVICIOS*/
 
 
 h3{
@@ -600,13 +642,16 @@ p{
 
 .slider-clientes {
     width: 100vw;
+    margin: auto;
     overflow: hidden;
     position: relative;
 }
 
 .slider-clientes .slider-clientes-track {
     display: flex;
-    animation: scroll infinite;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;;
+    width: calc(200px * 22);
     will-change: transform;
     background-color: #fff;
 }
@@ -627,10 +672,12 @@ p{
 
 @keyframes scroll {
     0% {
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        -webkit-transform: translateY(calc(-200px * 11));
+        transform: translateX(calc(-200px * 11));
     }
 }
 

@@ -105,7 +105,7 @@ const slideWidth = slides[0].offsetWidth + 20; // Incluyendo margen
 sliderTrack.style.width = `${totalSlides * slideWidth}px`;
 
 // Ajustar la duración de la animación basada en el número de imágenes
-const animationDuration = totalSlides * 5; // Modifica 5 para ajustar la velocidad
+const animationDuration = totalSlides * 1; // Modifica 5 para ajustar la velocidad
 sliderTrack.style.animationDuration = `${animationDuration}s`;
 
 //navbar
@@ -125,4 +125,56 @@ navLinks.forEach(link => {
         collapse.hide(); // Cierra el menú
     });
 });
+
+//SLIDER
+
+let list = document.querySelector('.container-slider .wrapper-slider');
+let items = document.querySelectorAll('.container-slider .wrapper-slider .wrapper-slider-item');
+let dots = document.querySelectorAll('.container-slider .dots li');
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+
+let active = 0
+let lengthItems = items.length - 1;
+
+next.onclick = function(){
+  if(active + 1 > lengthItems){
+    active = 0;
+}else{
+  active = active + 1;
+}
+reloadSlider();
+}
+
+prev.onclick = function(){
+  if(active -1 < 0){
+    active = lengthItems;
+  }else {
+    active = active - 1;
+  }
+  reloadSlider();
+}
+
+let refreshSlider = setInterval(() => {next.click()}, 5000);
+
+function reloadSlider(){
+  let checkLeft = items[active].offsetLeft;
+  list.style.left = -checkLeft + 'px';
+
+  let lastActiveDot = document.querySelector('.container-slider .dots li.active');
+  lastActiveDot.classList.remove('active');
+  dots[active].classList.add('active');
+
+  clearInterval(refreshSlider);
+  refreshSlider = setInterval(() => {next.click()}, 5000);
+}
+
+dots.forEach((li, key) => {
+  li.addEventListener('click', function(){
+    active = key;
+    reloadSlider();
+  })
+});
+
+window.addEventListener('resize', reloadSlider);
 
