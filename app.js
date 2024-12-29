@@ -159,7 +159,7 @@ let refreshSlider = setInterval(() => {next.click()}, 5000);
 
 function reloadSlider(){
   let checkLeft = items[active].offsetLeft;
-  list.style.left = -checkLeft + 'px';
+  list.style.transform = `translateX(-${checkLeft}px)`;
 
   let lastActiveDot = document.querySelector('.container-slider .dots li.active');
   lastActiveDot.classList.remove('active');
@@ -177,4 +177,3 @@ dots.forEach((li, key) => {
 });
 
 window.addEventListener('resize', reloadSlider);
-

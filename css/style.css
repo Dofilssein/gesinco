@@ -4,7 +4,7 @@
 :root {
     --color-principal: #ec3251;
     --color-secundario: #0d78be;
-    --color-texto-titulos: #000000;
+    --color-texto-titulos: #0d78be;
     --color-subrayado: #EE4461;
 
     --font-size-base: 1rem;
@@ -95,31 +95,22 @@ header.abajo #logo {
 /* SLIDER */
 
 .container-slider{
-    width: 100%;
-    height: 90vh;
-    margin: auto;
-    position: relative;
     overflow: hidden;
+    position: relative;
+    height: 90vh;
 }
 
 .wrapper-slider{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     display: flex;
-    width: max-content;
-
-    transition: all 2s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .wrapper-slider-item {
-    position: relative;
-    width: 100%;
+    flex: 0 0 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    height: 90vh;
 }
 
 .wrapper-slider-item::before {
@@ -129,33 +120,36 @@ header.abajo #logo {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    
     z-index: 0;
 }
 
 .wrapper-slider-item h2 {
-    position: absolute;
-    font-size: 1.5rem;
-    font-weight: 600;
-    z-index: 1;
-    color: #fff;
-    padding: 10px 20px;
+    z-index: 2;
+    display: flex;
     text-align: center;
-
-    bottom: 40%;
-    left: 10%;
-    right: 10%;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.5rem, 2.5vw, 3rem); /* Escalable según el tamaño de la pantalla */
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(13, 119, 190, 0.8); /* Fondo azul con opacidad */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    top: 50%;
+    left: 50%;
+    max-width: 60%;
+    height: auto;
+    min-height: 100px;
 }
 
-.wrapper-slider-item.position-1 h2{
-    bottom: 30%;
-}
 .wrapper-slider-item img{
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    max-height: 90vh;
     object-fit: cover;
-    position: relative;
-    z-index: -1;
+    object-position: center;
+    position: absolute;
 }
 .buttons{
     position: absolute;
@@ -525,36 +519,9 @@ p{
     }
 
     .wrapper-slider-item h2 {
-        position: absolute;
         font-size: 1.5rem;
-        font-weight: 600;
-        z-index: 1;
-        color: #fff;
-        padding: 10px 20px;
-        text-align: center;
-    
-        bottom: 40%;
-        left: 10%;
-        right: 10%;
-    }
-    
-    .wrapper-slider-item.position-1 h2{
-        bottom: 30%;
-    }
-
-    .wrapper-slider-item h2 {
-        font-size:  2rem;
-        bottom: 40%;
-        left: 10%;
-        right: 10%;
-    }
-    
-    .wrapper-slider-item.position-1 h2{
-        bottom: 30%;
-    }
-
-    .wrapper-slider-item.position-4 h2{
-        bottom: 30%;
+        padding: 6px 12px;
+        height: 100px;
     }
 
     .buttons button{
@@ -581,20 +548,11 @@ p{
         height: 28rem;
         max-width: 350px;
     }
-    
-    .wrapper-slider-item h2 {
-        font-size: 3rem;
-        bottom: 40%;
-        left: 10%;
-        right: 10%;
-    }
-    
-    .wrapper-slider-item.position-1 h2{
-        bottom: 30%;
-    }
 
-    .wrapper-slider-item.position-4 h2{
-        bottom: 30%;
+    .wrapper-slider-item h2 {
+        font-size: 2rem;
+        padding: 8px 16px;
+        height: 100px;
     }
 
     .buttons button{
