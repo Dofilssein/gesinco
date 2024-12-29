@@ -651,3 +651,21 @@ svg {
     border-radius: 2%;
     color: #fff;
 }
+
+/*MODAL CONTACTO*/
+  .modal-content {
+    background-color: rgba(236, 50, 81, 0.9); 
+    border-radius: 10px; 
+    color: white;
+  }
+  
+  .modal-footer .btn-primary {
+    background-color: #084c72;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  

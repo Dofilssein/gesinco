@@ -16,6 +16,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('feEXNVTGo4JtcJNqF')
+  </script>
 </head>
 
 <body>
@@ -435,33 +440,48 @@
           <div class="row align-items-center justify-content-center">
             <!-- Formulario -->
             <div class="col-12 col-md-6">
-              <form class="row formulario-contacto">
+              <form class="row formulario-contacto" id="form">
                 <div class="col-12 mb-3">
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" required />
+                  <input type="text" class="form-control" id="nombre" name="nombre" required />
                 </div>
                 <div class="col-12 mb-3">
                   <label for="email" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="email" required />
+                  <input type="email" class="form-control" id="email" name="email" required />
                 </div>
                 <div class="col-12 mb-3">
                   <label for="apellido" class="form-label">Asunto</label>
-                  <input type="text" class="form-control" id="Asunto" required />
+                  <input type="text" class="form-control" id="asunto" name="asunto" required />
                 </div>
                 <div class="col-12 mb-3">
                   <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="mensaje"
+                    <textarea class="form-control" placeholder="Escribe tu mensaje aquí" id="mensaje" name="mensaje"
                       style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Mensaje</label>
                   </div>
                 </div>
                 <div class="col-12 d-flex justify-content-center">
-                  <button class="btn btn-outline-dark px-3" id="boton-contacto">Enviar</button>
+                  <button type="submit" class="btn btn-outline-dark px-3" id="boton-contacto">Enviar</button>
                 </div>
               </form>
+              <!-- Modal Contacto-->
+              <div class="modal fade" id="modal-contacto" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document"> <!-- Se añade 'modal-dialog-centered' para centrar el modal -->
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <p>¡Mensaje enviado con éxito!</p>
+                      <p>Gracias por ponerte en contacto con Gesinco, pronto nos comunicaremos con vos 😊</p>
+                    </div>
+                    <div class="modal-footer border-0"> <!-- Eliminamos el borde de la parte inferior del modal -->
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
             <div class="col-12 col-md-6">
-              <!-- Información debajo del mapa -->
+              <!-- Información -->
               <div class="mt-3">
                 <h5 class="fw-bold" id="horarios">Horarios de atención</h5>
                 <ul id="lista" class="list-unstyled">
@@ -559,6 +579,7 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <script src="/app.js"></script>
+  <script src="/emailjs.js"></script>
 </body>
 
 </html>
