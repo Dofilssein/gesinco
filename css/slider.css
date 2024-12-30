@@ -91,6 +91,7 @@ header.abajo ul li a{
 header.abajo #logo {
     content: url("../assets/1000237217.png"); /* Cambia al logo negro */
 }
+
 /* SLIDER */
 
 .container-slider{
@@ -561,42 +562,34 @@ p{
 
 }
 
-
 /*CONTACTO*/
-
-#contactos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh; 
-    background-color: #f9f9f9; 
-  }
-  
-  #contactos h3 {
-    margin-bottom: 20px;
-  }
-  
-  .formulario-contacto {
-    width: 100%; 
-  }
-  
-  #contactos .row {
-    width: 100%; 
-  }
-  
-  #lista {
-    padding: 0;
-    text-align: center;
-  }
-  
 
 #title {
     color: #0d78be;
     position: relative;
     bottom: 20px;
     right: 10px;
-    font-size: 35px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0d78b0; 
+    transition: width 0.3s ease;
+}
+
+#title:hover {
+    color: #0d78b0;
+    transform: translateY(-5px);
+}
+
+#title:hover::after {
+    width: 100%;
 }
 
 #boton-contacto {
@@ -615,43 +608,43 @@ p{
 
 #horarios{
     color: #0d78b0;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+#horarios::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0d78b0; 
+    transition: width 0.3s ease;
+}
+
+#horarios:hover {
+    color: #0d78b0;
+    transform: translateY(-5px);
+}
+
+#horarios:hover::after {
+    width: 100%;
+}
 
 #lista, #direccion, #email, #telefono, #whatsapp {
     color: #0d78b0;
-}
-/* Estilos para los enlaces */
-a#direccion, 
-a#email, 
-a#telefono, 
-a#whatsapp {
-    color: #0d78b0;
-    transition: transform 0.3s ease, color 0.3s ease;
-    position: relative;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-a#direccion:hover, 
-a#email:hover, 
-a#telefono:hover, 
-a#whatsapp:hover {
-    transform: translateY(-5px);
-    color: #084c72; 
-}
-
-a#direccion:hover svg, 
-a#email:hover svg, 
-a#telefono:hover svg, 
-a#whatsapp:hover svg {
-    transform: translateY(-5px);
-}
-
-svg {
     transition: transform 0.3s ease;
 }
 
+#lista:hover, #direccion:hover, #email:hover, #telefono:hover, #whatsapp:hover {
+    transform: translateY(-5px);
+  
+}
+
+#mapa {
+    margin-top: 0; 
+    transition: margin-top 0.3s ease;
+}
 
 @media (max-width: 768px) {
     #mapa {
@@ -734,6 +727,10 @@ svg {
     padding: 10px;
     border-radius: 2%;
     color: #fff;
+}
+
+.animate__animated {
+    visibility: hidden;
 }
 
 .animate__animated.animate__fadeInUp{
