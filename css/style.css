@@ -744,3 +744,9 @@ svg {
 .animate__animated.animate__fadeInUp{
     visibility: visible;
 }
+.dfs{
+    background-color: #132f45;
+    color: #fff;
+    font-size: 15px;
+    height: 130px;
+}
