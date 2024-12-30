@@ -58,39 +58,72 @@ main{
 
 
 footer{
-    background-color: var(--color-principal);
+    background-color:#263238;
 }
-header{
+header {
     background-color: var(--color-principal);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    transition: background-color 0.7s, box-shadow 0.7s;
-}
-
-header.abajo {
-    background-color: rgba(255, 0, 0, 0); /* Transparente */ 
+    transition: background-color 0.7s, box-shadow 0.7s, opacity 0.7s;
+  }
+  
+  header.abajo {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparente parcial */
     box-shadow: none; /* Sin sombra */
-
-    .navbar-collapse{
+    opacity: 0.5; /* Transparencia parcial */
+  }
+  
+  header.abajo:hover {
+    background-color: var(--color-principal); /* Color original al pasar el mouse */
+    opacity: 1; /* Opacidad completa al pasar el mouse */
+  }
+  
+  header.abajo #logo,
+  header.abajo .navbar-nav .nav-link {
+    opacity: 0; /* Oculta el logo y los enlaces */
+    transition: opacity 0.7s;
+  }
+  
+  header.abajo:hover #logo,
+  header.abajo:hover .navbar-nav .nav-link {
+    opacity: 1; /* Muestra el logo y los enlaces al pasar el mouse */
+  }
+  
+  .navbar-nav .nav-link {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+  }
+  .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7); /* Oscurece solo las letras al pasar el mouse */
+  }
+  
+  /* Media query para aplicar el fondo solo en dispositivos móviles */
+  @media (max-width: 768px) {
+    .navbar-collapse {
         background-color: #0d78b0;
         border-radius: 15px;
         color: #fff;
         padding: 5px;
         flex-grow: 0;
-    }
-
-}
-header.abajo ul li a{
-    color: #fff;
-}
-
-
-header.abajo #logo {
-    content: url("../assets/1000237217.png"); /* Cambia al logo negro */
-}
+      }
+      
+      header.abajo .navbar-collapse {
+        background-color: rgba(13, 120, 176, 0.8); /* Transparente con color */
+      }
+      
+      header.abajo ul li a {
+        color: #fff;
+      }
+      header.abajo:hover {
+        background-color: var(--color-principal); /* Color original al pasar el mouse en móviles */
+        opacity: 1; /* Opacidad completa al pasar el mouse en móviles */
+      }
+  }
 /* SLIDER */
 
 .container-slider{
@@ -563,28 +596,6 @@ p{
 
 
 /*CONTACTO*/
-
-#contactos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh; 
-    background-color: #f9f9f9; 
-  }
-  
-  #contactos h3 {
-    margin-bottom: 20px;
-  }
-  
-  .formulario-contacto {
-    width: 100%; 
-  }
-  
-  #contactos .row {
-    width: 100%; 
-  }
-  
   #lista {
     padding: 0;
     text-align: center;
@@ -650,13 +661,6 @@ a#whatsapp:hover svg {
 
 svg {
     transition: transform 0.3s ease;
-}
-
-
-@media (max-width: 768px) {
-    #mapa {
-        margin-top: 20px;
-    }
 }
 
 /*SLIDER CLIENTES*/
