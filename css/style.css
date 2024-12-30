@@ -173,6 +173,13 @@ header {
     max-width: 60%;
     height: auto;
     min-height: 100px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.wrapper-slider-item h2.animate__fadeIn {
+    opacity: 1;
 }
 
 .wrapper-slider-item img{

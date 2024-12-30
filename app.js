@@ -143,6 +143,8 @@ let next = document.getElementById('next');
 let active = 0
 let lengthItems = items.length - 1;
 
+let isTransitioning = false;
+
 next.onclick = function(){
   if(active + 1 > lengthItems){
     active = 0;
@@ -161,18 +163,50 @@ prev.onclick = function(){
   reloadSlider();
 }
 
-let refreshSlider = setInterval(() => {next.click()}, 5000);
+let refreshSlider = setInterval(() => {next.click()}, 4000);
 
-function reloadSlider(){
+function reloadSlider() {
+  if (isTransitioning) return; // Evita ejecutar esta función si una transición ya está en progreso
+  isTransitioning = true;
+
   let checkLeft = items[active].offsetLeft;
+
+  // Iniciar la transición de la imagen
+  list.style.transition = "transform 1s ease-in-out";
   list.style.transform = `translateX(-${checkLeft}px)`;
 
-  let lastActiveDot = document.querySelector('.container-slider .dots li.active');
-  lastActiveDot.classList.remove('active');
-  dots[active].classList.add('active');
+  // Desactivar las animaciones previas
+  items.forEach((item) => {
+    const textElement = item.querySelector("h2");
+    textElement.classList.remove("animate__fadeInUp");
+    textElement.style.opacity = "0";
+  });
 
+  // Escuchar el evento de finalización de la transición
+  list.addEventListener(
+    "transitionend",
+    () => {
+      const activeItem = items[active];
+      const activeText = activeItem.querySelector("h2");
+      activeText.classList.add("animate__fadeInUp");
+      activeText.style.opacity = "1";
+
+      // Restablecer el estado para permitir nuevas transiciones
+      isTransitioning = false;
+    },
+    { once: true }
+  );
+
+  // Actualizar los dots activos
+  let lastActiveDot = document.querySelector(".container-slider .dots li.active");
+  lastActiveDot.classList.remove("active");
+  dots[active].classList.add("active");
+
+  // Reiniciar el intervalo del slider automático
   clearInterval(refreshSlider);
-  refreshSlider = setInterval(() => {next.click()}, 5000);
+  refreshSlider = setInterval(() => {
+    next.click();
+  }, 4000);
 }
 
 dots.forEach((li, key) => {
