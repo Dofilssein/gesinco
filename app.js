@@ -163,7 +163,7 @@ prev.onclick = function(){
   reloadSlider();
 }
 
-let refreshSlider = setInterval(() => {next.click()}, 3000);
+let refreshSlider = setInterval(() => {next.click()}, 4000);
 
 function reloadSlider() {
   if (isTransitioning) return; // Evita ejecutar esta función si una transición ya está en progreso
@@ -178,7 +178,7 @@ function reloadSlider() {
   // Desactivar las animaciones previas
   items.forEach((item) => {
     const textElement = item.querySelector("h2");
-    textElement.classList.remove("animate__fadeIn");
+    textElement.classList.remove("animate__fadeInUp");
     textElement.style.opacity = "0";
   });
 
@@ -188,7 +188,7 @@ function reloadSlider() {
     () => {
       const activeItem = items[active];
       const activeText = activeItem.querySelector("h2");
-      activeText.classList.add("animate__fadeIn");
+      activeText.classList.add("animate__fadeInUp");
       activeText.style.opacity = "1";
 
       // Restablecer el estado para permitir nuevas transiciones
@@ -206,7 +206,7 @@ function reloadSlider() {
   clearInterval(refreshSlider);
   refreshSlider = setInterval(() => {
     next.click();
-  }, 3000);
+  }, 4000);
 }
 
 dots.forEach((li, key) => {
