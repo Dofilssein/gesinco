@@ -57,74 +57,78 @@
   <main>
     <div class="container-slider">
       <div class="wrapper-slider">
-        <div class="wrapper-slider-holder">
-          <div id="slider-img-1">
-            <div id="slider-info">
-              <p class="p-1 fw-semibold fs-5">Estrategias inteligentes, tecnología avanzada y experiencia comprobada.
-              </p>
-            </div>
+
+        <div class="wrapper-slider-item position-1">  
+            <img src="./assets/bussines-group-people.jpg" alt="">
+              <h2 class="animate__animated animate__fadeInUp">Estrategias inteligentes, tecnología avanzada y experiencia comprobada.</h2> 
           </div>
-          <div id="slider-img-2">
-            <div id="slider-info">
-              <p class=" fw-semibold fs-5">Confianza construida en cada gestión.</p>
-            </div>
+          <div class="wrapper-slider-item position-2">     
+            <img src="./assets/bussines-meet.jpg" alt="">
+              <h2>Confianza construida en cada gestión.</h2>
           </div>
-          <div id="slider-img-3">
-            <div id="slider-info">
-              <p class=" fw-semibold fs-5">Eficiencia garantizada en cada paso.</p>
-            </div>
+          <div class="wrapper-slider-item position-3"> 
+            <img src="./assets/work-table-team-analysis.jpg" alt="">
+              <h2>Eficiencia garantizada en cada paso.</h2>
           </div>
-          <div id="slider-img-4">
-            <div id="slider-info">
-              <p class=" fw-semibold fs-5">Innovación tecnológica al servicio de nuestros clientes.</p>
-            </div>
-          </div>
-        </div>
+          <div class="wrapper-slider-item position-4"> 
+            <img src="./assets/entrepreneur-working-presentation-status.jpg" alt=""> 
+              <h2>Innovación tecnológica al servicio de nuestros clientes.</h2>
+          </div>                            
       </div>
-    </div>
+      <!-- Boton del slider-->
+      <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+     </div>
+     <!-- dots-->
+      <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+   </div>
 
-    <!--Cards de servicios-->
-    <section class="cards-container" aria-labelledby="services-title">
-      <div class="description-service-wrapper">
-        <h2 id="services-title" class="animate__animated animate__fadeInDown">Nuestros Servicios</h2>
-        <div class="animate__animated animate__zoomIn">
-          <p> En GESINCO, nos especializamos en optimizar y agilizar el proceso de recuperacion
-            de créditos y deudas para empresas de todo tipo.
-          </p>
-          <p>Brindamos soluciones personalizadas que permiten a nuestros clientes mejorar su liquidez y mantener
-            relaciones
-            comerciales saludables.
-          </p>
-        </div>
-      </div>
-      <div class="cards-wrapper">
+ <!--Cards de servicios-->
+ <section class="cards-container" aria-labelledby="services-title">
+  <div class="description-service-wrapper">
+  <h2 id="services-title" class="animate__animated" data-animation="animate__zoomIn">Nuestros <span class="subrayado">servicios</span></h2>
+  <div class="animate__animated" data-animation="animate__zoomIn">
+    <p> En GESINCO, nos especializamos en optimizar y agilizar el proceso de recuperacion
+    de créditos y deudas para empresas de todo tipo.
+    </p>
+    <p>Brindamos soluciones personalizadas que permiten a nuestros clientes mejorar su liquidez y mantener relaciones
+    comerciales saludables.
+    </p>
+  </div>
+</div>
+  <div class="cards-wrapper">
+    
+    <article id="card-1" class="card" aria-labelledby="cobranza-extrajudicial">
+      <h3 id="cobranza-extrajuddicial" class="card-title">Cobranza extrajudicial</h3>
+      <p>Nos encargamos de gestionar deudas vencidas en sus primeras etapas.
+        Realizamos seguimientos constantes mediante llamadas telefónicas, correos electrónicos
+        y mensajes automáticos, manteniendo siempre un trato respetuoso y profesional con sus clientes.
+      </p>
+    </article>
 
-        <article id="card-1" class="card" aria-labelledby="cobranza-extrajudicial">
-          <h3 id="cobranza-extrajuddicial" class="card-title">Cobranza extrajudicial</h3>
-          <p>Nos encargamos de gestionar deudas vencidas en sus primeras etapas.
-            Realizamos seguimientos constantes mediante llamadas telefónicas, correos electrónicos
-            y mensajes automáticos, manteniendo siempre un trato respetuoso y profesional con sus clientes.
-          </p>
-        </article>
+    <article id="card-2" class="card" aria-labelledby="recuperacion-de-cartera-morosa">
+      <h3 id="recuperacion-de-cartera-morosa" class="card-title">Recuperador de cartera morosa</h3>
+      <p>Realizamos análisis detallados de su cartera de clientes para implementar estrategias que
+        maximicen la tasa de recuperacion. Utilizamos tecnología avanzada para segmentar y priorizar deudores, garantizando
+        una gestion eficiente.
+      </p>
+    </article>
 
-        <article id="card-2" class="card" aria-labelledby="recuperacion-de-cartera-morosa">
-          <h3 id="recuperacion-de-cartera-morosa" class="card-title">Recuperador de cartera morosa</h3>
-          <p>Realizamos análisis detallados de su cartera de clientes para implementar estrategias que
-            maximicen la tasa de recuperacion. Utilizamos tecnología avanzada para segmentar y priorizar deudores,
-            garantizando
-            una gestion eficiente.
-          </p>
-        </article>
+    <article id="card-3" class="card" aria-labelledby="informes-de-gestion-y-analisis">
+      <h3 id="informes-de-gestion-y-analisis" class="card-title">Informes de gestión y análisis</h3>
+      <p>Brindamos informes detallados y análisis personalizados para que su empresa pueda tomar decisiones
+        informadas y optimizar el proceso de cobranzas.
+      </p>
+    </article>
 
-        <article id="card-3" class="card" aria-labelledby="informes-de-gestion-y-analisis">
-          <h3 id="informes-de-gestion-y-analisis" class="card-title">Informes de gestión y análisis</h3>
-          <p>Brindamos informes detallados y análisis personalizados para que su empresa pueda tomar decisiones
-            informadas y optimizar el proceso de cobranzas.
-          </p>
-        </article>
-
-      </div>
-    </section>
+  </div>
+</section>
     <!--SOBRE NOSOTROS-->
     <section id="sobreNosotros">
       <div class="container-fluid">
@@ -175,8 +179,8 @@
       <section>
         <!--¿Qué nos diferencia?-->
         <div class="container mb-5">
-          <h2 class="title-nosotros text-center">¿Qué nos diferencia?</h2>
-          <div class="herramienta">
+          <h1 class="title-nosotros text-center animate__animated" data-animation="animate__fadeInLeft">¿Qué nos <span class="subrayado">diferencia</span>?</h1>
+          <div class="herramienta animate__animated" data-animation="animate__fadeInRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
               class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
               <path d="M16 4.5a4.5 4.5 0 0 1-1.703 3.526L13 5l2.959-1.11q.04.3.041.61" />
@@ -185,7 +189,7 @@
             </svg>
             <span>Innovación en herramientas tecnológicas</span>
           </div>
-          <div class="diagrama">
+          <div class="diagrama animate__animated" data-animation="animate__fadeInRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-2"
               viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -193,7 +197,7 @@
             </svg>
             <span>Mejora constante de procesos</span>
           </div>
-          <div class="grupo">
+          <div class="grupo animate__animated" data-animation="animate__fadeInRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
               class="bi bi-person-arms-up" viewBox="0 0 16 16">
               <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
@@ -202,7 +206,7 @@
             </svg>
             <span>Acompañamiento a nuestro equipo</span>
           </div>
-          <div class="cliente">
+          <div class="cliente animate__animated" data-animation="animate__fadeInRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
               class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -210,7 +214,7 @@
             </svg>
             <span>Adaptación a cada uno de nuestros clientes</span>
           </div>
-          <div class="versatilidad">
+          <div class="versatilidad animate__animated" data-animation="animate__fadeInRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
               class="bi bi-arrow-repeat" viewBox="0 0 16 16">
               <path
@@ -224,11 +228,11 @@
       </section>
       <section>
         <!--INFRAESTRUCTURA-->
-        <h2 class="title-nosotros text-center">Infraestructura</h2>
+        <h1 class="title-nosotros text-center animate__animated" data-animation="animate__fadeInLeft">Infraestructura</h1>
         <div class="container">
           <div class="row justify-content-center">
             <!--Card 1-->
-            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center animate__animated" data-animation="animate__zoomIn">
               <div class="card-infraestructura bg-dark text-white">
                 <div class="card-body-infraestructura text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -245,7 +249,7 @@
             </div>
 
             <!--Card 2-->
-            <div class=" col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center">
+            <div class=" col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center animate__animated" data-animation="animate__zoomIn">
               <div class="card-infraestructura bg-dark text-white">
                 <div class="card-body-infraestructura text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear"
@@ -267,7 +271,7 @@
             </div>
 
             <!--Card 3-->
-            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center animate__animated" data-animation="animate__zoomIn">
               <div class="card-infraestructura bg-dark text-white">
                 <div class="card-body-infraestructura text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -288,7 +292,7 @@
             <!--2da fila de cards-->
 
             <!--Card 4-->
-            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center animate__animated" data-animation="animate__zoomIn">
               <div class="card-infraestructura bg-dark text-white">
                 <div class="card-body-infraestructura text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -313,7 +317,7 @@
             </div>
 
             <!--Card 5-->
-            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center animate__animated" data-animation="animate__zoomIn">
               <div class="card-infraestructura bg-dark text-white">
                 <div class="card-body-infraestructura text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -333,7 +337,7 @@
             </div>
 
             <!--Card 6-->
-            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-2 d-flex justify-content-center animate__animated" data-animation="animate__zoomIn">
               <div class="card-infraestructura bg-dark text-white">
                 <div class="card-body-infraestructura text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -355,8 +359,13 @@
     </section>
 
     <section id="clientes" class="mt-5 mb-5">
-      <h1 class="h1-cliente">Nuestros Clientes</h1>
-      <hr>
+      <h1 class="h1-cliente">Nuestros <span class="subrayado">clientes</span></h1>
+      <p class="info-empresas animate__animated" data-animation="animate__fadeInUp">Gracias a una plataforma multicanal de contacto y una constante actualización en
+        herramientas digitales, nos posicionamos como un socio estratégico para cada cliente.
+        Confían en nosotros Bancos, Financieras, Tarjetas de Crédito, Empresas de Servicios,
+        Compañías de Telefonía Móvil, grandes cadenas de Retail y Supermercados.</p>
+      <p class="desc-empresas">Empresas que confian en nosotros:</p>
+      
       <section class="slider-clientes">
         <article class="slider-clientes-track">
           <aside class="slide-cliente">
@@ -410,7 +419,7 @@
           <aside class="slide-cliente">
             <img src="./assets/logos_bancos/bn_santaFe.png" alt="">
           </aside>
-          <aside class="slide-cliente">
+          <aside class="slide-cliente">  
             <img src="./assets/logos_bancos/bn_municipal.png" alt="">
           </aside>
           <aside class="slide-cliente">
@@ -423,11 +432,11 @@
             <img src="./assets/logos_bancos/bn_credicoop.jpg" alt="">
           </aside>
           <aside class="slide-cliente">
-            <img src="./assets/logos_bancos/bn_credicoop.jpg" alt="">
+            <img src="./assets/logos_bancos/bn_creditoArgentino.png" alt="">
           </aside>
         </article>
       </section>
-    </section>
+</section>
     <!---------------------------------------CONTACTO------------------------------------------------------------->
     <section id="contacto">
       <div class="contactos" id="contactos">
@@ -565,11 +574,9 @@
       <div class="modalContent">
         <button id="closeModalBtn">X</button>
         <ul>
-          <li><a href="#" id="whatsappLink" target="_blank" class="bi bi-whatsapp fs-3" style="font-weight: bold;">
-              WhatsApp</a></li>
+          <li><a href="#" id="whatsappLink" target="_blank" class="bi bi-whatsapp fs-3" style="font-weight: bold;"> WhatsApp</a></li>
           <li><a href="#" id="callLink" class="bi bi-telephone fs-3" style="font-weight: bold;"> Llamada</a></li>
-          <li><a href="#" id="contactLink" class="bi bi-person-lines-fill fs-3" style="font-weight: bold;"> Ir a
-              Contacto</a></li>
+          <li><a href="#contacto" id="" class="bi bi-person-lines-fill fs-3" style="font-weight: bold;"> Ir a Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -580,6 +587,7 @@
     crossorigin="anonymous"></script>
   <script src="/app.js"></script>
   <script src="/emailjs.js"></script>
+  <script src="/animate.js"></script>
 </body>
 
 </html>
