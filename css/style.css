@@ -6,6 +6,7 @@
     --color-secundario: #0d78be;
     --color-texto-titulos: #0d78be;
     --color-subrayado: #EE4461;
+    --color-footer: #263238;
 
     --font-size-base: 1rem;
     --font-size-small: 0.875rem;
@@ -58,7 +59,7 @@ main{
 
 
 footer{
-    background-color:#263238;
+    background-color:var(--color-footer);
 }
 header {
     background-color: var(--color-principal);
@@ -752,8 +753,16 @@ svg {
     visibility: visible;
 }
 .dfs{
-    background-color: #132f45;
+    background-color: var(--color-footer);
     color: #fff;
     font-size: 15px;
     height: 130px;
+}
+
+@media (max-width: 627px){
+
+    .dfs{
+        height: 200px;
+    }
+
 }
