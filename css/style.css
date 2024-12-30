@@ -60,37 +60,66 @@ main{
 footer{
     background-color: var(--color-principal);
 }
-header{
+header {
     background-color: var(--color-principal);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    transition: background-color 0.7s, box-shadow 0.7s;
-}
-
-header.abajo {
-    background-color: rgba(255, 0, 0, 0); /* Transparente */ 
+    transition: background-color 0.7s, box-shadow 0.7s, opacity 0.7s;
+  }
+  
+  header.abajo {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparente parcial */
     box-shadow: none; /* Sin sombra */
-
-    .navbar-collapse{
+    opacity: 0.5; /* Transparencia parcial */
+  }
+  
+  header.abajo:hover {
+    background-color: var(--color-principal); /* Color original al pasar el mouse */
+    opacity: 1; /* Opacidad completa al pasar el mouse */
+  }
+  
+  header.abajo #logo,
+  header.abajo .navbar-nav .nav-link {
+    opacity: 0; /* Oculta el logo y los enlaces */
+    transition: opacity 0.7s;
+  }
+  
+  header.abajo:hover #logo,
+  header.abajo:hover .navbar-nav .nav-link {
+    opacity: 1; /* Muestra el logo y los enlaces al pasar el mouse */
+  }
+  
+  .navbar-nav .nav-link {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  /* Media query para aplicar el fondo solo en dispositivos móviles */
+  @media (max-width: 768px) {
+    .navbar-collapse {
         background-color: #0d78b0;
         border-radius: 15px;
         color: #fff;
         padding: 5px;
         flex-grow: 0;
-    }
-
-}
-header.abajo ul li a{
-    color: #fff;
-}
-
-
-header.abajo #logo {
-    content: url("../assets/1000237217.png"); /* Cambia al logo negro */
-}
+      }
+      
+      header.abajo .navbar-collapse {
+        background-color: rgba(13, 120, 176, 0.8); /* Transparente con color */
+      }
+      
+      header.abajo ul li a {
+        color: #fff;
+      }
+      header.abajo:hover {
+        background-color: var(--color-principal); /* Color original al pasar el mouse en móviles */
+        opacity: 1; /* Opacidad completa al pasar el mouse en móviles */
+      }
+  }
 /* SLIDER */
 
 .container-slider{
