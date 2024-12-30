@@ -182,7 +182,7 @@ header {
     object-fit: cover;
     object-position: center;
     position: absolute;
-    filter: contrast(0.7);
+    filter: contrast(0.6);
 }
 .buttons{
     position: absolute;
