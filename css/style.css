@@ -472,8 +472,7 @@ p{
 .modalContent{
     text-align: center;
     width: 100%;
-    height: 100%;
-
+    height: 80%;
     display: flex;
     flex-direction: column;
 
@@ -481,15 +480,13 @@ p{
 
 .modalContent ul{
     list-style: none;
-    padding: 1rem;
-    
+    padding: 0rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
+    margin:0px 0px 0px 0px;
 }
 
 .modalContent ul li {
@@ -524,8 +521,8 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    width: 20px;
+    height: 20px;
     border-radius: 1px;
 
     position: absolute;
@@ -545,7 +542,11 @@ p{
     transform: scale(1.1);
     background-color: #f78ca3
 }
-
+@media (max-width: 768px){
+    #actionModal{
+        height: 26rem;
+    }
+}
 @media (min-width: 768px){
 
 
