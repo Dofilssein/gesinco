@@ -217,3 +217,55 @@ dots.forEach((li, key) => {
 });
 
 window.addEventListener('resize', reloadSlider);
+
+document.getElementById('uploadForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const btn = document.getElementById('boton-contacto');
+  const modalContacto = new bootstrap.Modal(document.getElementById('modal-contacto'));
+
+  btn.innerText = 'Enviando...';
+
+  const formData = new FormData(this);
+  const fileInput = document.getElementById('archivo');
+  const file = fileInput.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      formData.append('file', reader.result.split(',')[1]); // Archivo en Base64
+      formData.append('fileName', file.name);
+      formData.append('mimeType', file.type);
+
+      // Enviar datos con el archivo
+      sendFormData(formData, btn, modalContacto);
+    };
+    reader.readAsDataURL(file);
+  } else {
+    // Enviar datos sin el archivo
+    sendFormData(formData, btn, modalContacto);
+  }
+});
+
+function sendFormData(formData, btn, modalContacto) {
+  fetch('https://script.google.com/macros/s/AKfycbyxpze_zH-0DZx19e-mncwKqZ8me3lZYqSXG41BmN_Xh3fcMH-W_F_7nKhtJ--53sKM1g/exec', {
+    method: 'POST',
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      btn.innerText = 'Enviar';
+      if (data.success) {
+        modalContacto.show();
+        document.getElementById('uploadForm').reset();
+      } else {
+        alert('Error: ' + data.error);
+      }
+    })
+    .catch((error) => {
+      btn.innerText = 'Enviar';
+      alert('Error al enviar el formulario: ' + error.message);
+    });
+}
+
+

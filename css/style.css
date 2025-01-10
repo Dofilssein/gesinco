@@ -499,6 +499,9 @@ p{
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
 }
+.input-file{
+    font-size: 0.8rem;
+}
 
 .modalContent{
     text-align: center;
