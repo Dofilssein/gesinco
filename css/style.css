@@ -724,7 +724,7 @@ svg {
     display: flex;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;;
-    width: calc(200px * 22);
+    width: calc(200px * 26);
     will-change: transform;
     background-color: #fff;
 }
