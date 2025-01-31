@@ -217,3 +217,16 @@ dots.forEach((li, key) => {
 });
 
 window.addEventListener('resize', reloadSlider);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar-collapse");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      if (navbar.classList.contains("show")) {
+        new bootstrap.Collapse(navbar).hide();
+      }
+    });
+  });
+});
