@@ -111,7 +111,7 @@ const slideWidth = slides[0].offsetWidth + 20; // Incluyendo margen
 sliderTrack.style.width = `${totalSlides * slideWidth}px`;
 
 // Ajustar la duración de la animación basada en el número de imágenes
-const animationDuration = totalSlides * 1; // Modifica 5 para ajustar la velocidad
+const animationDuration = totalSlides * 2; // Modifica 5 para ajustar la velocidad
 sliderTrack.style.animationDuration = `${animationDuration}s`;
 
 //navbar
