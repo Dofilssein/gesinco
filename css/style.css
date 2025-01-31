@@ -749,8 +749,8 @@ svg {
         transform: translateX(0);
     }
     100% {
-        -webkit-transform: translateY(calc(-200px * 11));
-        transform: translateX(calc(-200px * 11));
+        -webkit-transform: translateY(calc(-200px * 13));
+        transform: translateX(calc(-200px * 13));
     }
 }
 
