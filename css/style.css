@@ -68,7 +68,7 @@ footer{
     background-color:var(--color-footer);
 }
 header {
-    background-color: var(--color-principal);
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -78,39 +78,40 @@ header {
   }
   
   header.abajo {
-    background-color: rgba(255, 255, 255, 0.5); /* Transparente parcial */
+    /*rgba(255, 255, 255, 0.5) Transparente parcial */
     box-shadow: none; /* Sin sombra */
-    opacity: 0.5; /* Transparencia parcial */
+    /*opacity: 0.5;  Transparencia parcial */
   }
   
-  header.abajo:hover {
-    background-color: var(--color-principal); /* Color original al pasar el mouse */
-    opacity: 1; /* Opacidad completa al pasar el mouse */
-  }
+  /*header.abajo:hover {
+    background-color: #fff; /* Color original al pasar el mouse */
+    /*opacity: 1; /* Opacidad completa al pasar el mouse */
+
   
-  header.abajo #logo,
+ /* header.abajo #logo,
   header.abajo .navbar-nav .nav-link {
     opacity: 0; /* Oculta el logo y los enlaces */
-    transition: opacity 0.7s;
+   /* transition: opacity 0.7s;
   }
   
   header.abajo:hover #logo,
   header.abajo:hover .navbar-nav .nav-link {
     opacity: 1; /* Muestra el logo y los enlaces al pasar el mouse */
-  }
+ /* }*/
   
   .navbar-nav .nav-link {
     font-weight: bold;
-    color: #ffffff;
+    color:#007BFF;
     font-size: 18px;
-    transition: color 0.3s; /* Transición suave para el cambio de color */
+    /*transition: color 0.3s; /* Transición suave para el cambio de color */
   }
   .navbar-nav .nav-link:hover {
     color: rgba(0, 0, 0, 0.7); /* Oscurece solo las letras al pasar el mouse */
   }
   
+  
   /* Media query para aplicar el fondo solo en dispositivos móviles */
-  @media (max-width: 768px) {
+  /*@media (max-width: 768px) {
     .navbar-collapse {
         background-color: #0d78b0;
         border-radius: 15px;
@@ -121,16 +122,16 @@ header {
       
       header.abajo .navbar-collapse {
         background-color: rgba(13, 120, 176, 0.8); /* Transparente con color */
-      }
+      /*}
       
       header.abajo ul li a {
         color: #fff;
       }
       header.abajo:hover {
         background-color: var(--color-principal); /* Color original al pasar el mouse en móviles */
-        opacity: 1; /* Opacidad completa al pasar el mouse en móviles */
-      }
-  }
+        /*opacity: 1; /* Opacidad completa al pasar el mouse en móviles */
+     /* }
+  }*/
 /* SLIDER */
 
 .container-slider{
